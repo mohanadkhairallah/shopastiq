@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shopastiq/modules/product.dart';
-import 'package:shopastiq/screens/product_screen.dart';
 
 class ProductsListData extends ChangeNotifier {
   List<Product> allProductsList = [];

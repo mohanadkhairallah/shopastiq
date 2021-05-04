@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:shopastiq/modules/product.dart';
-import 'package:shopastiq/modules/products_list_data.dart';
 import 'package:shopastiq/widgets/product_card.dart';
 
 class ProductListViewer extends StatelessWidget {
