@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shopastiq/screens/favorite_screen/favorite_screen.dart';
-import 'package:shopastiq/screens/notification_screen/notification_screen.dart';
-import 'package:shopastiq/screens/setting_screen/setting_screen.dart';
+import 'package:shopastiq/screens/favorite_screen.dart';
+import 'package:shopastiq/screens/home_screen/home_screen.dart';
+import 'package:shopastiq/screens/notification_screen.dart';
+import 'package:shopastiq/screens/setting_screen.dart';
 
-class HomeScreenButtomBar extends StatelessWidget {
+class ButtomBarDef extends StatelessWidget {
+  final bool favorite;
+  final bool home;
+  final bool notification;
+  final bool setting;
+  ButtomBarDef({this.favorite, this.home, this.notification, this.setting});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,14 +51,17 @@ class HomeScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.favorite,
-                          color: Colors.white,
+                          color: favorite ? Colors.yellow : Colors.white,
+                          size: favorite ? 40 : null,
                         ),
-                        Text(
-                          'Favorite',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
+                        favorite
+                            ? Container()
+                            : Text(
+                                'Favorite',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
                       ],
                     ),
                     onPressed: () {
@@ -65,14 +75,32 @@ class HomeScreenButtomBar extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.home,
-                        size: 40,
-                        color: Colors.yellow,
-                      ),
-                    ],
+                  child: TextButton(
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.home,
+                          color: home ? Colors.yellow : Colors.white,
+                          size: home ? 40 : null,
+                        ),
+                        home
+                            ? Container()
+                            : Text(
+                                'Home',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                      ],
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Expanded(
@@ -81,15 +109,18 @@ class HomeScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.notifications,
-                          color: Colors.white,
+                          color: notification ? Colors.yellow : Colors.white,
+                          size: notification ? 40 : null,
                         ),
-                        Text(
-                          'Notification',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.white,
-                          ),
-                        ),
+                        notification
+                            ? Container()
+                            : Text(
+                                'Notification',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
                       ],
                     ),
                     onPressed: () {
@@ -108,15 +139,17 @@ class HomeScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.menu,
-                          color: Colors.white,
+                          color: setting ? Colors.yellow : Colors.white,
+                          size: setting ? 40 : null,
                         ),
-                        Text(
-                          'Setting',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.white,
-                          ),
-                        ),
+                        setting
+                            ? Container()
+                            : Text(
+                                'Setting',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
                       ],
                     ),
                     onPressed: () {

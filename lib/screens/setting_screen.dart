@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopastiq/screens/notification_screen/notification_screen_app_bar.dart';
-import 'package:shopastiq/screens/notification_screen/notification_screen_bottom_bar.dart';
-import 'package:shopastiq/screens/setting_screen/setting_screen_app_bar.dart';
-import 'package:shopastiq/screens/setting_screen/setting_screen_buttom_bar.dart';
+import 'package:shopastiq/widgets/bottom_bar_def.dart';
+import 'package:shopastiq/widgets/defulte_screen_app_bar.dart';
 
 class SettingScreen extends StatelessWidget {
   @override
@@ -12,7 +10,9 @@ class SettingScreen extends StatelessWidget {
         backgroundColor: Colors.grey,
         body: Column(
           children: [
-            SettingScreenAppBar(),
+            DefulteScreenAppBar(
+              title: 'Settings',
+            ),
             Expanded(
               child: Container(
                 child: Center(
@@ -22,7 +22,12 @@ class SettingScreen extends StatelessWidget {
             )
           ],
         ),
-        bottomNavigationBar: SettingScreenButtomBar(),
+        bottomNavigationBar: ButtomBarDef(
+          favorite: false,
+          home: false,
+          notification: false,
+          setting: true,
+        ),
       ),
     );
   }

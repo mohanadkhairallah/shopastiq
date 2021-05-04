@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopastiq/screens/favorite_screen/favorite_screen_buttom_bar.dart';
-import 'package:shopastiq/screens/notification_screen/notification_screen_app_bar.dart';
-import 'package:shopastiq/screens/notification_screen/notification_screen_bottom_bar.dart';
+import 'package:shopastiq/widgets/bottom_bar_def.dart';
+import 'package:shopastiq/widgets/defulte_screen_app_bar.dart';
 
 class NotificationScreen extends StatelessWidget {
   @override
@@ -11,7 +10,9 @@ class NotificationScreen extends StatelessWidget {
         backgroundColor: Colors.grey,
         body: Column(
           children: [
-            NotificationScreenAppBar(),
+            DefulteScreenAppBar(
+              title: 'Notifications',
+            ),
             Expanded(
               child: Container(
                 child: Center(
@@ -21,7 +22,12 @@ class NotificationScreen extends StatelessWidget {
             )
           ],
         ),
-        bottomNavigationBar: NotificationScreenButtomBar(),
+        bottomNavigationBar: ButtomBarDef(
+          favorite: false,
+          home: false,
+          notification: true,
+          setting: false,
+        ),
       ),
     );
   }

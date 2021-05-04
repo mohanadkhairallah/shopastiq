@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class SettingScreenAppBar extends StatelessWidget {
+class DefulteScreenAppBar extends StatelessWidget {
+  final String title;
+  DefulteScreenAppBar({this.title});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +13,7 @@ class SettingScreenAppBar extends StatelessWidget {
           color: Color(0xff297DAE)),
       child: Center(
         child: Text(
-          'Setting',
+          title,
           style: TextStyle(
               fontFamily: 'Lobster', fontSize: 40, color: Colors.white),
         ),

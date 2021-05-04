@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopastiq/modules/products_list_data.dart';
 import 'package:shopastiq/screens/home_screen/home_screen_app_bar.dart';
-import 'package:shopastiq/screens/home_screen/home_screen_buttom_bar.dart';
 import 'package:shopastiq/screens/home_screen/home_screen_tab_bar.dart';
+import 'package:shopastiq/widgets/bottom_bar_def.dart';
 import 'package:shopastiq/widgets/product_List_Viewer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,7 +34,12 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          bottomNavigationBar: HomeScreenButtomBar(),
+          bottomNavigationBar: ButtomBarDef(
+            favorite: false,
+            home: true,
+            notification: false,
+            setting: false,
+          ),
         ),
       );
     });
