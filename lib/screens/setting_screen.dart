@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopastiq/widgets/bottom_bar_def.dart';
 import 'package:shopastiq/widgets/defulte_screen_app_bar.dart';
+import 'package:shopastiq/widgets/defulte_screen_buttom_bar.dart';
 
 class SettingScreen extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class SettingScreen extends StatelessWidget {
             )
           ],
         ),
-        bottomNavigationBar: ButtomBarDef(
+        bottomNavigationBar: DefulteScreenButtomBar(
           favorite: false,
           home: false,
           notification: false,

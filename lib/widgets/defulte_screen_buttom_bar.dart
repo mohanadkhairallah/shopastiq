@@ -4,12 +4,13 @@ import 'package:shopastiq/screens/home_screen/home_screen.dart';
 import 'package:shopastiq/screens/notification_screen.dart';
 import 'package:shopastiq/screens/setting_screen.dart';
 
-class ButtomBarDef extends StatelessWidget {
+class DefulteScreenButtomBar extends StatelessWidget {
   final bool favorite;
   final bool home;
   final bool notification;
   final bool setting;
-  ButtomBarDef({this.favorite, this.home, this.notification, this.setting});
+  DefulteScreenButtomBar(
+      {this.favorite, this.home, this.notification, this.setting});
 
   @override
   Widget build(BuildContext context) {

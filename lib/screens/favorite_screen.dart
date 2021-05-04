@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopastiq/modules/products_list_data.dart';
-import 'package:shopastiq/widgets/bottom_bar_def.dart';
 import 'package:shopastiq/widgets/defulte_screen_app_bar.dart';
+import 'package:shopastiq/widgets/defulte_screen_buttom_bar.dart';
 import 'package:shopastiq/widgets/product_List_Viewer.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -31,7 +31,7 @@ class FavoriteScreen extends StatelessWidget {
                     ),
             ],
           ),
-          bottomNavigationBar: ButtomBarDef(
+          bottomNavigationBar: DefulteScreenButtomBar(
             favorite: true,
             home: false,
             notification: false,
