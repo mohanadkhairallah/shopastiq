@@ -10,6 +10,7 @@ class ProductsListData extends ChangeNotifier {
   List<Product> menClothList = [];
   List<Product> womenClothList = [];
   List<Product> favoriteList = [];
+  List<Product> inCartItems = [];
 
   void getProductList() async {
     if (allProductsList.length == 0) {
@@ -26,6 +27,7 @@ class ProductsListData extends ChangeNotifier {
           addingProduct.category = item['category'];
           addingProduct.image = item['image'];
           addingProduct.isFavorite = false;
+          addingProduct.cartItems = 0;
           allProductsList.add(addingProduct);
         }
         for (Product item in allProductsList) {
@@ -66,5 +68,23 @@ class ProductsListData extends ChangeNotifier {
     product.isFavorite = false;
     favoriteList.remove(product);
     notifyListeners();
+  }
+
+  void addToCart(Product product) {
+    inCartItems.add(product);
+    notifyListeners();
+  }
+
+  void removeFromCart(Product product) {
+    inCartItems.add(product);
+    notifyListeners();
+  }
+
+  String getTotalPrice() {
+    double totalPrice = 0;
+    for (Product item in inCartItems) {
+      totalPrice += double.parse(item.price);
+    }
+    return totalPrice.toStringAsFixed(2);
   }
 }

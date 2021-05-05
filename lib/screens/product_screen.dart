@@ -14,7 +14,6 @@ class ProductScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                // height: 150,
                 width: double.infinity,
                 padding: EdgeInsets.only(left: 25, right: 25, top: 20),
                 decoration: BoxDecoration(
@@ -25,7 +24,10 @@ class ProductScreen extends StatelessWidget {
                   product.title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontFamily: 'Lobster', color: Colors.white, fontSize: 30),
+                    fontFamily: 'Lobster',
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
                 ),
               ),
               Container(
@@ -50,7 +52,7 @@ class ProductScreen extends StatelessWidget {
                     children: [
                       Text(
                         product.description,
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(color: Colors.white),
                       ),
                       SizedBox(
                         height: 20,
@@ -71,6 +73,7 @@ class ProductScreen extends StatelessWidget {
                           ElevatedButton(
                             child: Text('Add to Cart'),
                             onPressed: () {
+                              productdata.addToCart(product);
                               Navigator.pop(context);
                             },
                           ),

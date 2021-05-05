@@ -6,6 +6,7 @@ class Product {
   String category;
   String image;
   bool isFavorite;
+  int cartItems;
 
   Product(
       {this.iD,
@@ -14,5 +15,6 @@ class Product {
       this.description,
       this.category,
       this.image,
-      this.isFavorite});
+      this.isFavorite,
+      this.cartItems});
 }

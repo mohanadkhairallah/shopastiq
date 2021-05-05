@@ -18,7 +18,9 @@ class HomeScreen extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
-                HomeScreenAppBar(),
+                HomeScreenAppBar(
+                  cartCount: productdata.inCartItems.length.toString(),
+                ),
                 HomeScreenTabBar(),
                 Expanded(
                   child: TabBarView(
