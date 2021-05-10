@@ -2,8 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopastiq/navi.dart';
-import 'package:shopastiq/screens/home_screen/home_screen.dart';
-import 'package:shopastiq/screens/login_screen.dart';
 import 'modules/auth_service.dart';
 import 'modules/my_User.dart';
 import 'modules/products_list_data.dart';
@@ -34,11 +32,5 @@ class MyApp extends StatelessWidget {
         home: Navi(),
       ),
     );
-    // return ChangeNotifierProvider(
-    //   create: (context) => ProductsListData(),
-    //   child: MaterialApp(
-    //     home: Navi(),
-    //   ),
-    // );
   }
 }

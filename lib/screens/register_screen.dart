@@ -19,7 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: mainColor,
+        backgroundColor: themeColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -34,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(
                   fontFamily: 'Lobster',
                   fontSize: 40,
-                  color: Colors.white,
+                  color: secondryColor,
                 ),
               ),
               Form(
@@ -79,7 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         child: Text(
                           'Register',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: secondryColor),
                         ),
                         onPressed: () async {
                           if (_formKey.currentState.validate()) {

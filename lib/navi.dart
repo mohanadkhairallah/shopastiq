@@ -11,11 +11,6 @@ class Navi extends StatefulWidget {
 
 class _NaviState extends State<Navi> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final user = Provider.of<MyUser>(context);
 

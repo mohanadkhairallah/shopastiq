@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shopastiq/modules/auth_service.dart';
-import 'package:shopastiq/screens/home_screen/home_screen.dart';
 import 'package:shopastiq/screens/register_screen.dart';
 import '../const.dart';
 
@@ -11,21 +10,17 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   String email = '';
-
   String password = '';
-
   final _formKey = GlobalKey<FormState>();
   final AuthService _auth = AuthService();
-
   String error = '';
-
   bool loading = false;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: mainColor,
+        backgroundColor: themeColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -40,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(
                   fontFamily: 'Lobster',
                   fontSize: 40,
-                  color: Colors.white,
+                  color: secondryColor,
                 ),
               ),
               Form(
@@ -85,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         child: Text(
                           'Login',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: secondryColor),
                         ),
                         onPressed: () async {
                           if (_formKey.currentState.validate()) {

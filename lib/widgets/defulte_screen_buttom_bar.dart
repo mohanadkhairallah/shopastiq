@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shopastiq/const.dart';
 import 'package:shopastiq/modules/auth_service.dart';
 import 'package:shopastiq/screens/favorite_screen.dart';
 import 'package:shopastiq/screens/home_screen/home_screen.dart';
-import 'package:shopastiq/screens/login_screen.dart';
 import 'package:shopastiq/screens/notification_screen.dart';
 import 'package:shopastiq/screens/setting_screen.dart';
 
@@ -14,7 +14,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
   DefulteScreenButtomBar(
       {this.favorite, this.home, this.notification, this.setting});
 
-  AuthService _auth = AuthService();
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
             topLeft: Radius.circular(50.0),
             topRight: Radius.circular(50.0),
           ),
-          color: Color(0xff297DAE)),
+          color: themeColor),
       child: SizedBox(
         height: 60,
         child: Column(
@@ -37,12 +37,12 @@ class DefulteScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.logout,
-                          color: Colors.white,
+                          color: secondryColor,
                         ),
                         Text(
                           'LogOut',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: secondryColor,
                           ),
                         ),
                       ],
@@ -58,7 +58,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.favorite,
-                          color: favorite ? Colors.yellow : Colors.white,
+                          color: favorite ? primaryColor : secondryColor,
                           size: favorite ? 40 : null,
                         ),
                         favorite
@@ -66,7 +66,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                             : Text(
                                 'Favorite',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: secondryColor,
                                 ),
                               ),
                       ],
@@ -87,7 +87,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.home,
-                          color: home ? Colors.yellow : Colors.white,
+                          color: home ? primaryColor : secondryColor,
                           size: home ? 40 : null,
                         ),
                         home
@@ -95,7 +95,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                             : Text(
                                 'Home',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: secondryColor,
                                 ),
                               ),
                       ],
@@ -116,7 +116,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.notifications,
-                          color: notification ? Colors.yellow : Colors.white,
+                          color: notification ? primaryColor : secondryColor,
                           size: notification ? 40 : null,
                         ),
                         notification
@@ -124,7 +124,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                             : Text(
                                 'Notification',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: secondryColor,
                                   fontSize: 10,
                                 ),
                               ),
@@ -146,7 +146,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.menu,
-                          color: setting ? Colors.yellow : Colors.white,
+                          color: setting ? primaryColor : secondryColor,
                           size: setting ? 40 : null,
                         ),
                         setting
@@ -154,7 +154,7 @@ class DefulteScreenButtomBar extends StatelessWidget {
                             : Text(
                                 'Setting',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: secondryColor,
                                 ),
                               ),
                       ],

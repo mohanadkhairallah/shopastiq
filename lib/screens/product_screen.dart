@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shopastiq/const.dart';
 import 'package:shopastiq/modules/product.dart';
 import 'package:shopastiq/modules/products_list_data.dart';
 
@@ -19,13 +20,13 @@ class ProductScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(50.0)),
-                    color: Color(0xff297DAE)),
+                    color: themeColor),
                 child: Text(
                   product.title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Lobster',
-                    color: Colors.white,
+                    color: secondryColor,
                     fontSize: 20,
                   ),
                 ),
@@ -45,21 +46,21 @@ class ProductScreen extends StatelessWidget {
                         topLeft: Radius.circular(50.0),
                         topRight: Radius.circular(50.0),
                       ),
-                      color: Color(0xff297DAE)),
+                      color: themeColor),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
                         product.description,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: secondryColor),
                       ),
                       SizedBox(
                         height: 20,
                       ),
                       Text(
                         'Price: ${product.price}  \$',
-                        style: TextStyle(fontSize: 20, color: Colors.yellow),
+                        style: TextStyle(fontSize: 20, color: primaryColor),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopastiq/screens/cart_screen.dart';
 
+import '../../const.dart';
+
 class HomeScreenAppBar extends StatelessWidget {
   final String cartCount;
   HomeScreenAppBar({this.cartCount});
@@ -10,18 +12,17 @@ class HomeScreenAppBar extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.only(left: 25, right: 25, top: 20, bottom: 20),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(50.0),
-        ),
-        color: Color(0xff297DAE),
-      ),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(50.0),
+          ),
+          color: themeColor),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             'Shopastiq',
             style: TextStyle(
-                fontFamily: 'Lobster', fontSize: 40, color: Colors.white),
+                fontFamily: 'Lobster', fontSize: 40, color: secondryColor),
           ),
           Container(
             child: GestureDetector(
@@ -37,7 +38,7 @@ class HomeScreenAppBar extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     Icons.shopping_cart,
-                    color: Colors.white,
+                    color: secondryColor,
                     size: 30,
                   ),
                   Positioned(
@@ -48,7 +49,7 @@ class HomeScreenAppBar extends StatelessWidget {
                         Icon(
                           Icons.brightness_1,
                           size: 20.0,
-                          color: Color(0xff297DAE),
+                          color: themeColor,
                         ),
                         Positioned(
                           top: 4.0,
@@ -57,7 +58,7 @@ class HomeScreenAppBar extends StatelessWidget {
                             child: Text(
                               cartCount,
                               style: TextStyle(
-                                  color: Colors.white,
+                                  color: secondryColor,
                                   fontSize: 11.0,
                                   fontWeight: FontWeight.bold),
                             ),

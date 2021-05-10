@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopastiq/const.dart';
 import 'package:shopastiq/modules/product.dart';
 import 'package:shopastiq/screens/product_screen.dart';
 
@@ -29,7 +30,7 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Text(
                       product.title,
-                      style: TextStyle(color: Color(0xff297DAE), fontSize: 20),
+                      style: TextStyle(color: themeColor, fontSize: 20),
                     ),
                     SizedBox(
                       height: 10,
@@ -38,10 +39,10 @@ class ProductCard extends StatelessWidget {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                          color: Color(0xff297DAE)),
+                          color: themeColor),
                       child: Text(
                         product.price.toString() + '  \$',
-                        style: TextStyle(color: Colors.yellow, fontSize: 20),
+                        style: TextStyle(color: primaryColor, fontSize: 20),
                       ),
                     )
                   ],

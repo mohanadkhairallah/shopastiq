@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-const mainColor = Color(0xff297DAE);
+const themeColor = Color(0xff297DAE);
+const primaryColor = Colors.yellow;
+const secondryColor = Colors.white;
 
 const textInputDecoration = InputDecoration(
   fillColor: Colors.white,

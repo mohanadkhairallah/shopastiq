@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shopastiq/const.dart';
 import 'package:shopastiq/modules/product.dart';
 import 'package:shopastiq/modules/products_list_data.dart';
 import 'package:shopastiq/screens/home_screen/home_screen.dart';
@@ -56,10 +57,7 @@ class CartScreen extends StatelessWidget {
                                   ),
                                   Text(
                                     '${product.price} SP',
-                                    style: TextStyle(
-                                        // background: Paint()
-                                        //   ..color = Colors.yellow,
-                                        fontSize: 20),
+                                    style: TextStyle(fontSize: 20),
                                   ),
                                 ],
                               ),
@@ -94,11 +92,11 @@ class CartScreen extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(50.0)),
-                                    color: Color(0xff297DAE)),
+                                    color: themeColor),
                                 child: Text(
                                   productdata.getTotalPrice() + '  \$',
                                   style: TextStyle(
-                                      color: Colors.yellow, fontSize: 20),
+                                      color: primaryColor, fontSize: 20),
                                 ),
                               )
                             ],
