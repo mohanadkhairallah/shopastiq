@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shopastiq/modules/auth_service.dart';
 import 'package:shopastiq/screens/favorite_screen.dart';
 import 'package:shopastiq/screens/home_screen/home_screen.dart';
+import 'package:shopastiq/screens/login_screen.dart';
 import 'package:shopastiq/screens/notification_screen.dart';
 import 'package:shopastiq/screens/setting_screen.dart';
 
@@ -11,6 +13,8 @@ class DefulteScreenButtomBar extends StatelessWidget {
   final bool setting;
   DefulteScreenButtomBar(
       {this.favorite, this.home, this.notification, this.setting});
+
+  AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +47,9 @@ class DefulteScreenButtomBar extends StatelessWidget {
                         ),
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      _auth.signOut();
+                    },
                   ),
                 ),
                 Expanded(

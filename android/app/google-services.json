@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199246248255",
+    "project_id": "shopastiq-8341a",
+    "storage_bucket": "shopastiq-8341a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199246248255:android:e55ecffff5fc5f416c3b8a",
+        "android_client_info": {
+          "package_name": "com.mohanadkhairallah.shopastiq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199246248255-stv29tv13fsj8vno7ce33jjamnfuc1mr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1l6XdiXGCnaTEaLJOAI63d0JsGR9zg3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199246248255-stv29tv13fsj8vno7ce33jjamnfuc1mr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
